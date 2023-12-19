@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa6";
 import { Button } from "@/components/ui/button";
-import { Table } from "antd";
 import { Input } from "@/components/ui/input";
 import LabeledInput from "@/components/custom/labeledInput";
 import TextArea from "antd/es/input/TextArea";

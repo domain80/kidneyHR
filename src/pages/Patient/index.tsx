@@ -1,8 +1,5 @@
-import { Link, NavLink, useNavigate } from "react-router-dom";
-import { FiHome } from "react-icons/fi";
-import { IoStatsChart } from "react-icons/io5";
-import { FaArrowLeft, FaCircleUser } from "react-icons/fa6";
-import { IoNotificationsOutline } from "react-icons/io5";
+import { Link, useNavigate } from "react-router-dom";
+import { FaArrowLeft } from "react-icons/fa6";
 import { Button } from "@/components/ui/button";
 import LabeledInput from "@/components/custom/labeledInput";
 import { Table } from "antd";

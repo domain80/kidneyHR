@@ -2,7 +2,7 @@ import LabeledInput from "@/components/custom/labeledInput";
 import { cn } from "@/lib/utils";
 import { FaArrowDown, FaArrowUp } from "react-icons/fa6";
 import { IoSearch } from "react-icons/io5";
-import { Table, Tag } from "antd";
+import { Table } from "antd";
 import { Link } from "react-router-dom";
 
 export default function DashboardPage() {
@@ -102,7 +102,7 @@ export default function DashboardPage() {
             title: "",
             dataIndex: "",
             key: "name",
-            render: (_, record: any) => {
+            render: (_: any, record: any) => {
                 return <Link to={`patient/${record.key}`}> View </Link>;
             },
         },
@@ -160,6 +160,7 @@ export default function DashboardPage() {
 
                 <Table
                     className="mt-8"
+                    // @ts-expect-error
                     columns={columns}
                     dataSource={datasource}
                     bordered
