@@ -8,6 +8,7 @@ import ResetPassword from "./pages/ResetPassword.tsx";
 import Dashboard from "./pages/Dashboard.tsx";
 import Patient from "./pages/Patient";
 import DashboardPage from "./pages/DashboardPage.tsx";
+import NewReport from "./pages/Patient/newReport.tsx";
 
 const router = createBrowserRouter([
     { path: "/", element: <App /> },
@@ -19,7 +20,7 @@ const router = createBrowserRouter([
         children: [
             { index: true, element: <DashboardPage /> },
             { path: "patient/:patientID", element: <Patient /> },
-            { path: "patient/:patientID/newReport", element: <></> },
+            { path: "patient/:patientID/newReport", element: <NewReport /> },
         ],
     },
 ]);

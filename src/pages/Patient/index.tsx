@@ -1,4 +1,4 @@
-import { NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { FiHome } from "react-icons/fi";
 import { IoStatsChart } from "react-icons/io5";
 import { FaArrowLeft, FaCircleUser } from "react-icons/fa6";
@@ -30,9 +30,11 @@ export default function Dashboard() {
                             <FaArrowLeft className="text-neutral-400 mt-1" />
                             Overview
                         </button>
-                        <Button className=" bg-pink-700 text-gray-50 px-8">
+                        <Link
+                            to={"newReport"}
+                            className=" rounded-md py-2 bg-pink-700 text-gray-50 px-8">
                             New Report
-                        </Button>
+                        </Link>
                     </header>
 
                     <div className="flex justify-between items-center">
