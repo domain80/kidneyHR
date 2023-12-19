@@ -1,7 +1,7 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { FiHome } from "react-icons/fi";
 import { IoStatsChart } from "react-icons/io5";
-import { FaCircleUser } from "react-icons/fa6";
+import { FaArrowLeft, FaCircleUser } from "react-icons/fa6";
 import { IoNotificationsOutline } from "react-icons/io5";
 import { Button } from "@/components/ui/button";
 import LabeledInput from "@/components/custom/labeledInput";
@@ -15,12 +15,21 @@ import {
 } from "@/components/ui/select";
 
 export default function Dashboard() {
+    const navigate = useNavigate();
+    function onBackNavigate() {
+        navigate(-1);
+    }
     return (
         <>
             <div className="w-full container py-10 ">
                 <section>
                     <header className="flex justify-between items-center mb-14">
-                        <h1 className="text-xl">Overview</h1>
+                        <button
+                            className="text-xl flex items-center gap-2"
+                            onClick={onBackNavigate}>
+                            <FaArrowLeft className="text-neutral-400 mt-1" />
+                            Overview
+                        </button>
                         <Button className=" bg-pink-700 text-gray-50 px-8">
                             New Report
                         </Button>
@@ -135,15 +144,13 @@ export default function Dashboard() {
                             <h3 className="font-semibold text-lg text-neutral-600">
                                 Current Medical Condition
                             </h3>
-                            <li>Hepatits B</li>
-                            <li>Interstitial nephritis</li>
+                            <p className="text-gray-300">Not Available</p>
                         </ul>
                         <ul className="list-disc list-inside">
                             <h3 className="font-semibold text-lg text-neutral-600">
                                 Genetic Conditions
                             </h3>
-                            <li>G6PD full defect</li>
-                            <li>Sickle cell</li>
+                            <p className="text-gray-300">Not Available</p>
                         </ul>
                     </div>
                 </section>

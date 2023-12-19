@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import { FaArrowDown, FaArrowUp } from "react-icons/fa6";
 import { IoSearch } from "react-icons/io5";
 import { Table, Tag } from "antd";
+import { Link } from "react-router-dom";
 
 export default function DashboardPage() {
     const enum tStat {
@@ -87,7 +88,6 @@ export default function DashboardPage() {
             dataIndex: "email",
             key: "email",
         },
-        {},
         {
             title: "Condition",
             dataIndex: "condition",
@@ -97,6 +97,14 @@ export default function DashboardPage() {
                     {condition}
                 </span>
             ),
+        },
+        {
+            title: "",
+            dataIndex: "",
+            key: "name",
+            render: (_, record: any) => {
+                return <Link to={`patient/${record.key}`}> View </Link>;
+            },
         },
     ];
     return (
@@ -149,13 +157,14 @@ export default function DashboardPage() {
                         />
                     </div>
                 </header>
-            </section>
-            <div className="shadow-md ring-1 ring-gray-200 p-4 py-8 mt-12 rounded-md">
+
                 <Table
+                    className="mt-8"
                     columns={columns}
                     dataSource={datasource}
+                    bordered
                 />
-            </div>
+            </section>
         </div>
     );
 }
