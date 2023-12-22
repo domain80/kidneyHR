@@ -1,8 +1,8 @@
 import LabeledInput from "./components/custom/labeledInput";
-import { Button } from "./components/ui/button";
-import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
-import { BiUser, BiLockAlt } from "react-icons/bi";
+import {Button} from "./components/ui/button";
+import {useNavigate} from "react-router-dom";
+import {Link} from "react-router-dom";
+import {BiUser, BiLockAlt} from "react-icons/bi";
 
 function App() {
   const navigate = useNavigate();

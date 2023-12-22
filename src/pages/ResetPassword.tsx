@@ -1,7 +1,7 @@
 import Logo from "@/components/custom/logo";
-import { Button } from "../components/ui/button";
+import {Button} from "../components/ui/button";
 import LabeledInput from "@/components/custom/labeledInput";
-import { BiLockAlt } from "react-icons/bi";
+import {BiLockAlt} from "react-icons/bi";
 
 export default function ResetPassword() {
   return (
